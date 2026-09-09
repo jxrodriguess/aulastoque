@@ -45,6 +45,8 @@
     width: 75px;
     height: 60px;
 }
+
+
 #turmas{
     display: flex;
 }
@@ -77,4 +79,8 @@
 }
 .det_turma{
     padding: 15px;
+}
+
+a{
+    text-decoration: none;
 }
