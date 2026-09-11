@@ -34,7 +34,8 @@ db.run(`
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL,
         email TEXT NOT NULL,
-        idade INTEGER NOT NULL,
+        matricula INTEGER NOT NULL,
+        pin INTEGER NOT NULL,
         criadoEm TEXT DEFAULT CURRENT_TIMESTAMP
     )
 `);
@@ -47,15 +48,15 @@ db.run(`
 // tudo numa "new Promise(...)": assim quem chamar salvarUsuario()
 // pode simplesmente usar "await salvarUsuario(...)" e esperar o
 // resultado, como se fosse uma função síncrona comum.
-function salvarUsuario(nome, email, idade) {
+function salvarUsuario(nome, email, matricula, pin) {
     return new Promise((resolve, reject) => {
-        const sql = "INSERT INTO usuarios (nome, email, idade) VALUES (?, ?, ?)";
+        const sql = "INSERT INTO usuarios (nome, email, matricula, pin) VALUES (?, ?, ?, ?)";
 
         // Atenção: aqui usamos "function" (e não uma arrow function "=>")
         // de propósito. É só dentro de uma function "tradicional" como essa
         // que o sqlite3 nos dá acesso a "this.lastID", que é o id que o
         // banco acabou de gerar automaticamente para a nova linha.
-        db.run(sql, [nome, email, idade], function (erro) {
+        db.run(sql, [nome, email, matricula, pin], function (erro) {
             if (erro) {
                 // Se algo deu errado (ex.: banco travado, SQL inválido),
                 // rejeitamos a Promise para quem chamou poder tratar o erro.
@@ -67,7 +68,8 @@ function salvarUsuario(nome, email, idade) {
                 id: this.lastID,
                 nome,
                 email,
-                idade
+                matricula,
+                pin
             });
         });
     });

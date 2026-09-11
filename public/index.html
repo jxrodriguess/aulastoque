@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de usuarios</title>
+    <link rel="stylesheet" href="cadastro.css">    
+</head>
+<body>
+    <div class="esquerda">
+        <img src="senac.png" width="500px">
+    </div>
+    <div class="direita">
+        <img src="download.png" class="logo1">
+        <div class="login_completo">
+            <div class="login">
+                <h1><Strong>Cadastro</Strong></h1>
+                <p>Faça seu cadastro</p>
+            </div>
+            <input type="text" placeholder="Nome:" class="campos" id="nome">
+            <input type="text" placeholder="CPF:" class="campos" id="cpf">
+            <input type="text" placeholder="Email:" class="campos" id="email">
+            <select name="Tipo:" class="campos" id="tipo">
+                <option value=""disabled selected hidden>Tipo:</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Docente/Professor">Docente/Professor</option>
+            </select>
+            <input type="text" placeholder="Matricula:" class="campos" id="matricula">
+            <input type="text" placeholder="PIN:" class="campos" id="pin">
+            <div class="botao">
+                <button id="cadastro">Cadastrar</button>
+            </div>
+                <p id="mensagem"></p>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

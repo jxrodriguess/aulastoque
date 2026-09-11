@@ -30,13 +30,13 @@ app.use(express.static("public"));
 // então pedimos pro servidor "esperar" o banco responder antes de
 // continuar para a linha de baixo.
 app.post("/cadastrar", async (req, res) => {
-    const { nome, email, idade } = req.body;
+    const { nome, email, matricula, pin } = req.body;
 
     // Validação simples no servidor (além da validação que já
     // fazemos no front-end com alert)
-    if (!nome || !email || !idade) {
+    if (!nome || !email || !matricula || !pin) {
         return res.status(400).json({
-            erro: "Preencha nome, email e idade."
+            erro: "Preencha nome, email, matricula e pin."
         });
     }
 
@@ -45,7 +45,7 @@ app.post("/cadastrar", async (req, res) => {
     // escrita) e responder com um erro 500 ao invés de derrubar o
     // servidor inteiro.
     try {
-        const novoUsuario = await salvarUsuario(nome, email, Number(idade));
+        const novoUsuario = await salvarUsuario(nome, email, matricula, pin);
 
         // 201 = "Created" -> conseguimos criar o recurso com sucesso
         res.status(201).json(novoUsuario);

@@ -43,7 +43,7 @@ body {
 .logo1 {
     width: 150px;
     position: absolute;
-    top: 150px;
+    top: 125px;
     right: 189px;
     z-index: 10;
 }
@@ -64,11 +64,11 @@ h4{
     border: solid;
     padding: 50px;
     width: 380px;
-    height: 450px;
+    height: 525px;
     border-radius: 10px;
     border-color: #e06c00;
     position: absolute;
-    top: 22vh;
+    top: 19vh;
     right: 27vh;
     background: linear-gradient(260deg, #b0cae1a8 0%, #8caec9af 100%);
     gap: 10px;
@@ -78,7 +78,7 @@ h4{
 .botao button {
     position: absolute;
     right: 8vh;
-    top: 45vh;
+    top: 51vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
