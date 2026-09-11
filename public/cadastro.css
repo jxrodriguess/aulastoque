@@ -78,7 +78,7 @@ h4{
 .botao button {
     position: absolute;
     right: 8vh;
-    top: 43vh;
+    top: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,6 +128,24 @@ button:active {
     outline: none;
 }
 
+select{
+    color: rgba(255, 255, 255, 0.473);
+    border-radius: 5px;
+}
+
+select option{
+    background-color: #0054947a;
+    color: rgb(255, 255, 255);
+}
+
+select:invalid{
+    color: rgba(255, 255, 255, 0.473);
+}
+
+select:valid{
+    color: rgba(255, 255, 255, 0.473);
+}
+
 input {
     border-radius: 5px;
     color: white;
@@ -148,5 +166,4 @@ label {
     top: 35vh;
     color: white;
     font-size: 20px;
-    
 }
