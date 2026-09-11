@@ -1,80 +1,150 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: #808791;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);;
 }
 
-body{
+body {
     display: flex;
 }
 
-.esquerda{
+.esquerda {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
     height: 100vh;
-    background-image: 
+    background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("fundo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+
 }
 
+.login {
+    display: flex;
+    flex-direction: column;
+    color: #e06c00;
+    justify-content: center;
+    align-items: center;
+}
 
-.logo1{
+.login p{
+    color: #e06c00;
+    font-size: 16px;
+}
+
+.logo1 {
     width: 150px;
     position: absolute;
-    top: 230px;
-    right: 275px;
+    top: 150px;
+    right: 189px;
+    z-index: 10;
 }
 
-.direita{
+.direita {
     width: 50%;
     justify-content: center;
     align-items: center;
 }
 
-.login_completo{
+h4{
+    font-size: 20px;
+}
+
+.login_completo {
     display: flex;
     flex-direction: column;
     border: solid;
     padding: 50px;
-    width: 275px;
-    border-radius: 15px;
-    border-color: rgb(175, 114, 0);
+    width: 380px;
+    height: 450px;
+    border-radius: 10px;
+    border-color: #e06c00;
     position: absolute;
-    top: 30vh;
-    right: 35vh;
-    background-color: #c9e1eca1;
+    top: 22vh;
+    right: 27vh;
+    background: linear-gradient(260deg, #b0cae1a8 0%, #8caec9af 100%);
     gap: 10px;
+    z-index: 1;
 }
 
-.campos{
+.botao button {
+    position: absolute;
+    right: 8vh;
+    top: 43vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    padding: 15px;
+    width: 35vh;
+    border-radius: 15px;
+    border-color: #e06c00;
+    color: white;
+    background-color: #e06c00;
+    font-size: 40px;
+    font-weight: bold;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 0.3s ease;
+}
+
+button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.04);
+    background-color: #e06c00;
+}
+
+button:active {
+    transform: scale(1.0);
+    transition: transform 0.1s ease;
+}
+
+.login_completo .login {
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.campos {
     border: solid;
     border-width: 2px;
-    border-color: rgb(175, 114, 0);
-    background-color: #005594;
+    border-color: #e06c00;
+    background-color: #005494be;
     padding: 10px;
     font-size: 15px;
     outline: none;
 }
 
-input::placeholder{
-    color: white
+input {
+    color: white;
 }
 
-button{
-    border: solid;
-    padding: 15px;
-    border-radius: 15px;
-    border-color: rgb(175, 114, 0);
+input::placeholder {
+    color: rgba(255, 255, 255, 0.473)
+}
+
+input[type=checkbox]{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+label {
+    position: absolute;
+    top: 35vh;
     color: white;
-    background-color: rgb(175, 114, 0);
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 20px;
+    
 }
