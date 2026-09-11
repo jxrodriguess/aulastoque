@@ -42,7 +42,7 @@ body {
 .logo1 {
     width: 150px;
     position: absolute;
-    top: 150px;
+    top: 180px;
     right: 189px;
     z-index: 10;
 }
@@ -63,11 +63,11 @@ h4{
     border: solid;
     padding: 50px;
     width: 380px;
-    height: 450px;
+    height: 375px;
     border-radius: 10px;
     border-color: #e06c00;
     position: absolute;
-    top: 22vh;
+    top: 25vh;
     right: 27vh;
     background: linear-gradient(260deg, #b0cae1a8 0%, #8caec9af 100%);
     gap: 10px;
@@ -77,7 +77,7 @@ h4{
 .botao button {
     position: absolute;
     right: 8vh;
-    top: 43vh;
+    top: 36vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,6 +128,7 @@ button:active {
 }
 
 input {
+    margin-top: 15px;
     border-radius: 5px;
     color: white;
 }
@@ -144,7 +145,7 @@ input[type=checkbox]{
 
 label {
     position: absolute;
-    top: 35vh;
+    top: 29vh;
     color: white;
     font-size: 20px;
     
